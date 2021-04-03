@@ -1,0 +1,60 @@
+<!--heading-->
+<div class="container">
+  <p class="h2 fw-bold text-center mt-5 mb-2">你想對誰說幹話?</p>
+</div>
+
+<form method="POST" action="/">
+  <div class="container" style="width: 70vw">
+    <div class="row d-flex justify-content-between">
+      <div class="col d-flex flex-column align-items-center m-2">
+        <div class="avatar rounded d-flex align-items-end" style="height: 165px">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+            alt="engineer" class="img-fluid rounded">
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="role" id="engineerCheck" value="engineer">
+          <label class="form-check-label fw-bold" for="engineerCheck">
+            工程師
+          </label>
+        </div>
+      </div>
+      <div class="col d-flex flex-column align-items-center m-2">
+        <div class="avatar rounded d-flex align-items-end" style="height: 165px">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+            alt="designer" class="img-fluid rounded">
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="role" id="designerCheck" value="designer">
+          <label class="form-check-label fw-bold" for="designerCheck">
+            設計師
+          </label>
+        </div>
+      </div>
+      <div class="col d-flex flex-column align-items-center m-2">
+        <div class="avatar rounded d-flex align-items-end" style="height: 165px">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+            alt="entrepreneur" class="img-fluid rounded">
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="role" id="entrepreneurCheck" value="entrepreneur">
+          <label class="form-check-label fw-bold fs-6" for="entrepreneurCheck">
+            創業家
+          </label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container d-flex align-items-start" style="width: 70vw">
+    <button type="submit" class="btn btn-danger btn-sm border fw-bold ms-2">產生幹話</button>
+    <div class="card ms-4" style="width: 55vw">
+      <div class="card-body fw-bold">
+        <!--Here would be replaced by the word-->
+        {{#if sentence}}
+        <span>{{sentence}}</span>
+        {{/if}}
+      </div>
+
+    </div>
+</form>
